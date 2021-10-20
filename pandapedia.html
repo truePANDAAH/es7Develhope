@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizio 7</title>
+    <style>
+        .pagamenti {
+            padding-top: 2px;
+            margin-top: 2px;
+            
+        }
+        body {
+            background-color: antiquewhite;
+        }
+        .bottoneIscrizione {
+            align-content: center;
+        }
+        input[type=text] {
+            
+            padding: 8px 15px;
+            margin: 8px 0;
+            box-sizing: border-box;
+         }
+         input [type=number] {
+             width: 100%;
+             padding: 8px 15px;
+            margin: 8px 0;
+            box-sizing: border-box;
+         }
+         h4 {
+            color: red;
+         }
+         video {
+            position: absolute;
+            left: 50%
+        }
+        audio {
+            position: absolute;
+            left: 55%;
+        }
+    </style>
+</head>
+
+<body>
+    <!--sarebbe bello in autoplay , ma non è andato , neanche fornendo un src secondario con formato differente-->
+    <audio  controls autoplay loop >
+        <source src="./cose_da_panda/panda.mp3" type="audio/mpeg">
+    </audio>
+
+    <h1>PANDAPEDIA</h1>
+    
+    <hr>
+   
+      <!--welcome from pandas-->
+    <video width="400" height="220" autoplay muted loop>
+        <source src="./cose_da_panda/Cute pandas playing on the slide.mp4 " type="video/mp4">
+    </video>
+    
+
+    <!-- inizio sezioni di registrazione -->
+    <h2>Registrazione di seguito</h2>
+    <section class="anagrafica">   
+        <div>
+            <!--Sezione Anagrafica-->
+            <label for="name">Nome</label>
+            <strong><abbr title="richiesto">*</abbr></strong>
+            <input type="text" id="name" name="nome" required>
+            <br>
+            <label for="surName">Cognome</label>
+            <strong><abbr title="richiesto">*</abbr></strong>
+            <input type="text" name="cognome" id="surName" required>
+        </div>
+        <div>
+            <label for="birthday">Nato/a il</label>
+            <strong><abbr title="richiesto">*</abbr></strong>
+            <input type="date" id="birthday" name="compleanno" data-="custom" required>
+        </div>
+        <div>
+            <br>
+            <label for="telefono">Numero cellulare</label>
+            <strong><abbr title="richiesto">*</abbr></strong>
+            <input type="number" id="telefono" name="numeroCell" minlength="10" maxlength="10" required>
+        </div>
+
+    </section>
+    <br>
+    <hr>
+
+    <section class="abbonamenti" >
+
+        <div>
+            <!---Sezione Abbonamenti-->
+            <h3>Selezione l'abbonamento adatto a te o scegli direttamenteo la verisone PRO</h3>
+            <label for="abbonamento6mesi">Semestrale 130€</label>
+            <input type="radio" id="abbonamento6Mesi" name="abbonamento" >
+            <br>
+            <label for="abbonamentoMensile">Mensile 30€</label>
+            <input type="radio" id="abbonamentoMensile" name="abbonamento" checked >
+            <br>
+            <label for="abbonamentoAnnuale">Annuale 250€</label>
+            <input type="radio" id="abbonamentoAnnuale" name="abbonamento" >
+            <br>
+            <label for="iscrizioneGratis">Provalo Gratis </label>
+            <input type="radio" id="iscrizioneGratis" name="abbonamento" >
+        </div>
+        <div>
+            <!---Sezione PRO-->
+            <h4>PRO version a soli 50€ anno in più</h4>
+            <h5>Salata le code e ricevi anteprime ed offerte uniche per il livello PRO</h5>
+            <label for="proVersion">Salta le file con la versione PRO</label>
+            <input type="checkbox" id="proVersion" name="propro" required>
+        </div>
+    </section>
+    <hr>
+    <section class="pagamenti" >
+
+        <div>
+            <!--Sezione Carta-->
+            <!--fixare uso unico dei numeri nella sezione numerica-->
+            <label for="carte">Seleziona la carta:</label>
+            <strong><abbr title="richiesto">*</abbr></strong>
+            <select id="carte" name="carte">
+                <option value="visa">Visa</option>
+                <option value="americanExpress">American Express</option>
+                <option value="postePay">Poste Pay</option>
+                <option value="payPal">Pay Pal</option>
+            </select>
+            <br>
+            <label for="numberCC">Inserisci il numero della tua carta</label>
+            <strong><abbr title="richiesto">*</abbr></strong>
+            <input type="number" id="numberCC" name="numeriCarta" maxlength="16" required>
+            <br>
+            <label for="cvc">CVC</label>
+            <strong><abbr title="richiesto">*</abbr></strong>
+            <input type="number" name="codcieSicurezza" id="cvc" minlength="0" maxlength="3"  required >
+            <br>
+            <label for="scadenza">Scadenza</label>
+            <strong><abbr title="richiesto">*</abbr></strong>
+            <input type="date" name="dataScadenza" id="scadenza" required>
+            <br>
+            <label for="fatturazione">Indirizzo di fatturazione</label>
+            <strong><abbr title="richiesto">*</abbr></strong>
+            <input type="text" id="fatturazione" name="indirizzoFatturazione" required>
+
+        </div>
+        <hr>
+        <div class="bottoneIscrizione">
+            <label for="iscrizione">Invia il modulo</label>
+            <input type="submit" id="iscrizione" name="fine" >
+        </div>
+
+    </section>
+
+    
+</body>
+<footer style="text-align: center;" >Copyright &copy; DDD2021</footer>
+</html>
